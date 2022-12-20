@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"
-        xmlns:th="http://www.thymeleaf.org">
-<!--        xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
-<!--        layout:decorate="~{/layout}">-->
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout}">
 <head>
     <meta charset="UTF-8">
     <title>PROJECT</title>
@@ -11,16 +11,14 @@
     <script src="/uikit/js/uikit-icons.js"></script>
 </head>
 <body>
-
-    <th:block th:include="headerNav"></th:block>
-
-<!--    배경-->
+<div layout:fragment="contents">
+    <!--    배경-->
     <div class="uk-cover-container uk-container uk-container-small">
         <canvas width="400" height="400"></canvas>
         <img src="/img/titleimg.jpg" alt="" uk-cover>
     </div>
 
-<!--    input -->
+    <!--    input -->
     <form class="uk-container uk-container-small uk-text-center">
 
         <div class="uk-margin uk-margin-large-top">
@@ -32,21 +30,19 @@
 
     </form>
 
-<!--    트렌드 음원 -->
+    <!--    트렌드 음원 -->
     <div class="uk-container uk-container-small uk-text-center uk-margin uk-margin-large-top">
         <p class="uk-text-large uk-text-bold">트렌드 음원</p>
     </div>
     <form class="uk-container uk-container-small uk-text-center uk-margin uk-margin-medium-top ">
-
         <ul class="uk-grid-small uk-child-width-1-2 uk-child-width-1-5@s" uk-sortable="handle: .uk-card" uk-grid>
-
             <li>
                 <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
                     <div class="uk-card-media-top uk-cover-container">
                         <img src="/img/titleimg.jpg" alt="" uk-cover>
                         <canvas width="168" height="168"></canvas>
                     </div>
-                    <div class="">
+                    <div>
                         <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
                         <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
                     </div>
@@ -237,5 +233,7 @@
     <div>
         <canvas height="180"></canvas>
     </div>
+</div>
+
 </body>
 </html>

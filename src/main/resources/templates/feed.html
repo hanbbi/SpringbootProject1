@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>home</title>
+<!--    <link rel="stylesheet" href="/uikit/css/uikit.css">-->
+<!--    <script src="/uikit/js/uikit.js"></script>-->
+<!--    <script src="/uikit/js/uikit-icons.js"></script>-->
+</head>
+<body>
+    <div layout:fragment="contents">
+
+        <!--    TOP50-->
+        <div class="uk-container uk-container-small uk-margin uk-margin-small-top">
+            <p class="uk-text-large uk-text-bold">TOP 50</p>
+        </div>
+        <form class="uk-container uk-container-small uk-text-center uk-margin uk-margin-small-top" >
+            <div class="" uk-slider>
+                <ul class="uk-slider-items uk-grid-small uk-child-width-1-2 uk-child-width-1-5@s" uk-slideshow="autoplay-interval: 1000">
+
+                    <li>
+                        <div class="uk-panel">
+                            <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
+                                <div class="uk-card-media-top uk-cover-container">
+                                    <img src="/img/titleimg.jpg" alt="" uk-cover>
+                                    <canvas width="168" height="168"></canvas>
+                                </div>
+                                <div class="">
+                                    <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
+                                    <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
+                                <div class="uk-card-media-top uk-cover-container">
+                                    <img src="/img/1.jpg" alt="" uk-cover>
+                                    <canvas width="168" height="168"></canvas>
+                                </div>
+                                <div class="">
+                                    <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
+                                    <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
+                                <div class="uk-card-media-top uk-cover-container">
+                                    <img src="/img/2.jpg" alt="" uk-cover>
+                                    <canvas width="168" height="168"></canvas>
+                                </div>
+                                <div class="">
+                                    <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
+                                    <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
+                                <div class="uk-card-media-top uk-cover-container">
+                                    <img src="/img/3.jpg" alt="" uk-cover>
+                                    <canvas width="168" height="168"></canvas>
+                                </div>
+                                <div class="">
+                                    <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
+                                    <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
+                                <div class="uk-card-media-top uk-cover-container">
+                                    <img src="/img/4.jpg" alt="" uk-cover>
+                                    <canvas width="168" height="168"></canvas>
+                                </div>
+                                <div class="">
+                                    <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
+                                    <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="uk-panel">
+                            <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
+                                <div class="uk-card-media-top uk-cover-container">
+                                    <img src="/img/5.jpg" alt="" uk-cover>
+                                    <canvas width="168" height="168"></canvas>
+                                </div>
+                                <div class="">
+                                    <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
+                                    <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
+
+            </div>
+
+        </form>
+        <div class="uk-container uk-container-small uk-text-center">
+            <hr class="uk-margin-medium-top uk-margin-medium-bottom">
+        </div>
+    </div>
+
+</body>
+</html>

@@ -9,10 +9,10 @@ import java.util.Date;
 @Data
 @ToString
 public class UserDto {
-    String userId;
-    String pw;
-    String name;
-    String email;
+    private String userId;
+    private String pw;
+    private String name;
+    private String email;
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date birth;
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")

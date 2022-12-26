@@ -11,4 +11,25 @@
     <select id="findById" resultType="UserDto" parameterType="String">
         SELECT * FROM USER WHERE user_id=#{id}
     </select>
+<!--    insert    -->
+    <insert id="insert" parameterType="UserDto">
+        INSERT INTO
+        USER (user_id,name,pw,email,birth)
+        VALUES (#{user_id},#{name},#{pw},#{email},#{birth})
+    </insert>
+<!--    updateById    -->
+    <select id="updateById" parameterType="UserDto">
+        UPDATE USER SET
+        name=#{name},
+        pw=#{pw},
+        email=#{email},
+        birth=#{birth},
+        signup=#{signup}
+        WHERE user_id=#{user_id}
+    </select>
+<!--    deleteById    -->
+    <delete id="deleteById" parameterType="UserDto">
+        DELETE FROM USER WHERE user_id=#{Id}
+    </delete>
+
 </mapper>

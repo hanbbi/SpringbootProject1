@@ -15,4 +15,6 @@ public interface UserMapper extends CRUD<UserDto,String>{
     int updateById(UserDto dto);
 
     int insert(UserDto dto);
+
+    UserDto findByIdAndPw (String id, String pw);
 }

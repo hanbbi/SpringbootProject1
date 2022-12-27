@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.projectgroup1.mapper.FeedMapper">
+<!--     List<FeedDto> findAll();   -->
+    <select id="findAll" resultType="FeedDto">
+        SELECT * FROM FEED
+    </select>
+
+<!--    FeedDto findById (String feedNum);  -->
+    <select id="findById" resultType="FeedDto">
+        SELECT * FROM FEED WHERE feed_num=#{feedNum}
+    </select>
+
+<!--    int insert(FeedDto dto);    -->
+    <insert id="insert" parameterType="FeedDto">
+        INSERT INTO FEED (feed_num,title,contents,user_id)
+            VALUES (#{feedNum},#{title},#{contents},#{userId})
+    </insert>
+
+<!--    int updateById(FeedDto dto);    -->
+    <update id="updateById" parameterType="FeedDto">
+        UPDATE FEED SET
+            title=#{title},
+            contents=#{contents}
+            WHERE feed_num=#{feedNum}
+    </update>
+
+<!--    int deleteById(String id);  -->
+    <delete id="deleteById">
+        DELETE FROM FEED WHERE feed_num=#{feedNum}
+    </delete>
+
+<!--    int updateViews(String feedNum);    -->
+    <update id="updateViews">
+        UPDATE FEED SET views = views+1 WHERE feed_num=#{feedNum}
+    </update>
+</mapper>

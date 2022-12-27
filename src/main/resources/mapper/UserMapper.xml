@@ -20,22 +20,24 @@
         SELECT * FROM USER WHERE user_id=#{id} AND pw=#{pw}
     </select>
 
-<!--    int insert(UserDto dto);    -->
+<!--    insert    -->
     <insert id="insert" parameterType="UserDto">
-        INSERT INTO USER (user_id,pw,name,email,birth) VALUE (#{userId},#{pw},#{name},#{email},#{birth})
+        INSERT INTO
+        USER (user_id,name,pw,email,birth)
+        VALUES (#{user_id},#{name},#{pw},#{email},#{birth})
     </insert>
-
-<!--    int deleteById(String id);  -->
-    <delete id="deleteById">
-        DELETE FROM USER WHERE user_id=#{id}
-    </delete>
-
-<!--    int updateById(UserDto dto);    -->
-    <update id="updateById">
+<!--    updateById    -->
+    <select id="updateById" parameterType="UserDto">
         UPDATE USER SET
-            name=#{name},
-            email=#{email},
-            birth=#{birth}
-        WHERE user_id=#{userId}
-    </update>
+        name=#{name},
+        pw=#{pw},
+        email=#{email},
+        birth=#{birth},
+        signup=#{signup}
+        WHERE user_id=#{user_id}
+    </select>
+<!--    deleteById    -->
+    <delete id="deleteById" parameterType="UserDto">
+        DELETE FROM USER WHERE user_id=#{Id}
+    </delete>
 </mapper>

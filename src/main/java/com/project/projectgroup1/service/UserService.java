@@ -12,6 +12,6 @@ public interface UserService {
     UserDto login(String id, String pw);
 //  List<UserDto> list(PagingDto paging);
     UserDto detail(String id);
-    int idCheck(String id);//0:존재하지 않는 아이디,1:존재하는 아이디,-1:오류
+    int idCheck(String id);
     int remove(String id);
 }

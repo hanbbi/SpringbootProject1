@@ -1,7 +1,5 @@
 package com.project.projectgroup1.mapper;
 
-
-
 import java.util.List;
 
 public interface CRUD<T,P> {
@@ -13,4 +11,5 @@ public interface CRUD<T,P> {
     int deleteById(P id);
     int updateById(T dto);
     int insert(T dto);
+
 }

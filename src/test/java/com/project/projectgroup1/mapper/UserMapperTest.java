@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -36,8 +37,6 @@ class UserMapperTest {
         System.out.println(userMapper.findByIdAndPw("a_reply_writer", "1234"));
     }
 
-
-
     @Test
     void insert() throws ParseException {
         UserDto user= new UserDto();
@@ -47,7 +46,9 @@ class UserMapperTest {
         user.setEmail("ash@naver.com");
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         user.setBirth(sdf.parse("2022-12-26"));
-        System.out.println(user);
+        user.setSignup(new Date());
+//        System.out.println(user);
+        userMapper.insert(user);
     }
 
     @Test
@@ -59,7 +60,8 @@ class UserMapperTest {
         user.setEmail("ash323@naver.com");
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         user.setBirth(sdf.parse("2022-12-25"));
-        System.out.println(user);
+//        System.out.println(user);
+        userMapper.updateById(user);
     }
 
 }

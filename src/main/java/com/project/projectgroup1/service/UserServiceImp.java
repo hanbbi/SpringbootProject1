@@ -1,13 +1,24 @@
 package com.project.projectgroup1.service;
 
 import com.project.projectgroup1.dto.UserDto;
+import com.project.projectgroup1.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class UserServiceImp implements UserService {
+
+    private UserMapper userMapper;
+
+    public UserServiceImp(UserMapper userMapper){
+        this.userMapper = userMapper;
+    }
+
     @Override
     public List<UserDto> listAllTest() {
-        return null;
+        return userMapper.findAll();
     }
 
     @Override
@@ -27,7 +38,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public UserDto login(String id, String pw) {
-        return null;
+        return userMapper.findByIdAndPw(id,pw);
     }
 
     @Override

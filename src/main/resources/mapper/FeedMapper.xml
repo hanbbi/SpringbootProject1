@@ -5,7 +5,7 @@
 <mapper namespace="com.project.projectgroup1.mapper.FeedMapper">
 <!--     List<FeedDto> findAll();   -->
     <select id="findAll" resultType="FeedDto">
-        SELECT * FROM FEED
+        SELECT *,feed_num feedNum FROM FEED
     </select>
 
 <!--    FeedDto findById (String feedNum);  -->

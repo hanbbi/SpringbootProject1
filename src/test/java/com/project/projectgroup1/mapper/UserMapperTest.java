@@ -34,16 +34,16 @@ class UserMapperTest {
 
     @Test
     void findByIdAndPw() throws ParseException {
-        System.out.println(userMapper.findByIdAndPw("a_reply_writer", "1234"));
+        System.out.println(userMapper.findByIdAndPw("user1", "1234"));
     }
 
     @Test
     void insert() throws ParseException {
         UserDto user= new UserDto();
-        user.setUserId("test1");
+        user.setUserId("test2");
         user.setName("안성현");
         user.setPw("1234");
-        user.setEmail("ash@naver.com");
+        user.setEmail("ash2@naver.com");
         SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
         user.setBirth(sdf.parse("2022-12-26"));
         user.setSignup(new Date());

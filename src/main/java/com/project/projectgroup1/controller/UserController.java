@@ -1,15 +1,14 @@
 package com.project.projectgroup1.controller;
 
 import com.project.projectgroup1.dto.UserDto;
-import com.project.projectgroup1.mapper.UserMapper;
 import com.project.projectgroup1.service.UserService;
-import com.project.projectgroup1.service.UserServiceImp;
 import jakarta.servlet.http.HttpSession;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping("/user")
@@ -65,5 +64,41 @@ public class UserController {
         } else {
             return "redirect:/";
         }
+
     }
+    @GetMapping("/profil.do")
+    public ModelAndView profil(
+            @RequestParam(name = "user_id") String userId,
+            ModelAndView model
+    ){
+            UserDto user=userService.detail(userId);
+            model.addObject("user",user);
+            model.setViewName("/user/profil");
+            return model;
+    }
+    @GetMapping("/detail.do")
+    public ModelAndView detail(
+            @RequestParam(name = "user_id") String userId,
+            ModelAndView model
+    )  {
+        UserDto user=userService.detail(userId);
+        model.addObject("user",user);
+        model.setViewName("/user/detail");
+        return model;
+    }
+    @PostMapping ("/modify.do")
+    public String modify(UserDto user){
+        int modify=0;
+        try {
+            modify=userService.adminModify(user);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        if(modify>0){
+            return "redirect:/user/detail.do?user_id="+user.getUserId();
+        }else {
+            return "redirect:/user/modify.do?user_id="+user.getUserId();
+        }
+    }
+
 }

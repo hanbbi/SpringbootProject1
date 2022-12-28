@@ -16,7 +16,7 @@ class UserServiceImpTest {
 
     @Test
     void listAllTest() {
-        userService.listAllTest();
+        System.out.println(userService.listAllTest());
     }
 
     @Test

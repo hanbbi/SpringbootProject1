@@ -51,6 +51,11 @@ class FeedMapperTest {
     }
 
     @Test
+    void findTrend() {
+        System.out.println(feedMapper.findTrend());
+    }
+
+    @Test
     void updateViews() {
 
     }

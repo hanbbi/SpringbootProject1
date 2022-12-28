@@ -11,21 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping("/feed")
-public class FeedController {
+public class BaseController {
     private FeedService feedService;
 
-    public FeedController(FeedService feedService) {
+    public BaseController(FeedService feedService) {
         this.feedService = feedService;
     }
 
-    @GetMapping("/feed.do")
-    public String feed(){
-
-        return "/feed";
-    }
-
-    @GetMapping("/list.do")
+    @GetMapping("/")
     public String list(Model model,
                        HttpServletRequest req){
         List<FeedDto> feedList = feedService.trendList();

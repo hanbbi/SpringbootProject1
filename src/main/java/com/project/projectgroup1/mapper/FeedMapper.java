@@ -9,8 +9,8 @@ import java.util.List;
 public interface FeedMapper extends CRUD<FeedDto,String> {
 
     List<FeedDto> findAll();
-
-    FeedDto findById (String feedNum);
+    List<FeedDto> findTrend();
+    FeedDto findById (int feedNum);
 
     int deleteById(String id);
 
@@ -18,5 +18,5 @@ public interface FeedMapper extends CRUD<FeedDto,String> {
 
     int insert(FeedDto dto);
 
-    int updateViews(String feedNum);
+    int updateViews(int feedNum);
 }

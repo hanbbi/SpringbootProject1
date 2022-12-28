@@ -36,123 +36,16 @@
     </div>
     <form class="uk-container uk-container-small uk-text-center uk-margin uk-margin-medium-top ">
         <ul class="uk-grid-small uk-child-width-1-2 uk-child-width-1-5@s" uk-sortable="handle: .uk-card" uk-grid>
-            <li>
+            <li th:each="feed:${feedtrendList}" >
+<!--            <li>-->
                 <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
                     <div class="uk-card-media-top uk-cover-container">
                         <img src="/img/titleimg.jpg" alt="" uk-cover>
                         <canvas width="168" height="168"></canvas>
                     </div>
                     <div>
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/1.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/2.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/3.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/4.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/5.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/6.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/7.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/8.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
-                    </div>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
-                    <div class="uk-card-media-top uk-cover-container">
-                        <img src="/img/9.jpg" alt="" uk-cover>
-                        <canvas width="168" height="168"></canvas>
-                    </div>
-                    <div class="">
-                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom">노래제목1</h3>
-                        <p class="uk-text-small uk-text-left uk-margin-remove">유저아이디1</p>
+                        <h3 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom" th:text="${feed.title}"></h3>
+                        <p class="uk-text-small uk-text-left uk-margin-remove" th:text="${feed.userId}">유저아이디1</p>
                     </div>
                 </a>
             </li>

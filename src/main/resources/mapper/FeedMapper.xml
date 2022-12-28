@@ -3,17 +3,27 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.project.projectgroup1.mapper.FeedMapper">
+    <resultMap id="feedMap" type="feedDto" autoMapping="true">
+        <id column="feed_num" property="feedNum" />
+        <result column="user_id" property="userId" />
+        <result column="post_time" property="postTime" />
+
+    </resultMap>
 <!--     List<FeedDto> findAll();   -->
-    <select id="findAll" resultType="FeedDto">
-        SELECT *,feed_num feedNum FROM FEED
+    <select id="findAll" resultMap="feedMap">
+        SELECT * FROM FEED
     </select>
 
 <!--    FeedDto findById (String feedNum);  -->
-    <select id="findById" resultType="FeedDto">
+    <select id="findById" resultMap="feedMap">
         SELECT * FROM FEED WHERE feed_num=#{feedNum}
     </select>
 
-<!--    int insert(FeedDto dto);    -->
+    <select id="findTrend" resultMap="feedMap">
+        SELECT * FROM FEED ORDER BY views DESC LIMIT 10
+    </select>
+
+    <!--    int insert(FeedDto dto);    -->
     <insert id="insert" parameterType="FeedDto">
         INSERT INTO FEED (feed_num,title,contents,user_id)
             VALUES (#{feedNum},#{title},#{contents},#{userId})

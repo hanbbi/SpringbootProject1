@@ -12,4 +12,5 @@ public class FeedDto {
     private int views;          // views
     private String userId;      // user_id
     private Date postTime;      // post_time
+    private ImageDto feedImg;
 }

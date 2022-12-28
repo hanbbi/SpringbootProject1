@@ -23,7 +23,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     public int signup(UserDto user) {
-        return 0;
+        return userMapper.insert(user);
     }
 
     @Override

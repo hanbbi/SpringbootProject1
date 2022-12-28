@@ -33,16 +33,37 @@ public class UserController {
         session.setAttribute("loginUser",user);
         System.out.println(user);
         if(user==null){
-            session.setAttribute("loginMadal","아이디 비밀번호를 확인해주세요");
+            session.setAttribute("msg","아이디 비밀번호를 확인해주세요");
             return "redirect:/";
         } else {
+            session.removeAttribute("msg");
             return "redirect:/feed.do";
         }
     }
 
     @GetMapping("/logout.do")
-    public String logout(HttpSession session) {
+    public String logout(HttpSession session){
+//        session.invalidate();   //전체 만료
         session.removeAttribute("loginUser");
         return "redirect:/";
+    }
+
+    @GetMapping("/join.do")
+    public void join() {}
+
+    @PostMapping("/join.do")
+    public String join(UserDto user) {
+        System.out.println(user);
+        int join = 0;
+        try {
+            join = userService.signup(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        if (join > 0) {
+            return "/feed";
+        } else {
+            return "redirect:/";
+        }
     }
 }

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>프로필 편집</title>
+</head>
+<body>
+<div layout:fragment="contents">
+    <form class="uk-container uk-container-small uk-margin uk-margin-small-top uk-position-relative">
+        <nav class="uk-position-top-right uk-margin-remove-bottom" uk-navbar>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a class="" href="" uk-icon="icon: more"></a>
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                <li><a href="#">배경변경</a></li>
+                                <li><a th:href="@{'/user/detail.do'(user_id=${session.loginUser.userId})}">개인정보 수정</a></li>
+                                <li><a href="#">프로필 편집</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="uk-flex">
+            <div class="uk-cover-container" style="height: 170px; width: 170px; border-radius: 50%">
+                <img src="/img/Screenshot_20221208-165335_Instagram.jpg" alt="" uk-cover>
+            </div>
+            <div class="uk-margin-medium-left">
+                <h4 class="uk-text-middle uk-text-left uk-margin-small-top uk-margin-remove-bottom"
+                    th:text="${session.loginUser.userId}"></h4>
+            </div>
+        </div>
+        <div class="uk-flex uk-flex-left uk-margin uk-margin-top">
+            <p>한줄 소개 한줄 소개 한줄 소개 한줄 소개</p>
+        </div>
+        <nav class="uk-navbar uk-tab uk-margin-large-top">
+            <div class="uk-navbar-left">
+                <ul class="uk-navbar-nav uk-active ">
+                    <li><a href="#">업로드한 음악</a></li>
+                    <li><a href="#">커넥트 스토리</a></li>
+                    <li><a href="#">좋아요</a></li>
+                </ul>
+            </div>
+        </nav>
+    </form>
+
+</div>
+</body>
+</html>

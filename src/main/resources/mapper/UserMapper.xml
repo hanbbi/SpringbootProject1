@@ -6,7 +6,7 @@
 
 <!--    List<UserDto> findAll();   -->
     <select id="findAll" resultType="com.project.projectgroup1.dto.UserDto">
-        SELECT * FROM USER
+        SELECT *,user_id userId FROM USER
     </select>
 
 <!--    UserDto findById(String id);    -->

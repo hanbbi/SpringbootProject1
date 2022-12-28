@@ -7,7 +7,11 @@
         <id column="feed_num" property="feedNum" />
         <result column="user_id" property="userId" />
         <result column="post_time" property="postTime" />
-
+        <association property="feedImg"
+                     select="com.project.projectgroup1.mapper.ImageMapper.findByFeedNum"
+                     column="feed_num"
+                     fetchType="lazy"
+        />
     </resultMap>
 <!--     List<FeedDto> findAll();   -->
     <select id="findAll" resultMap="feedMap">
@@ -20,6 +24,7 @@
     </select>
 
     <select id="findTrend" resultMap="feedMap">
+<!--        SELECT * FROM FEED ORDER BY views DESC LIMIT 10-->
         SELECT * FROM FEED ORDER BY views DESC LIMIT 10
     </select>
 

@@ -14,7 +14,7 @@
         <h2>개인 정보</h2>
         <p class="uk-text-right">
             <a class="uk-button uk-button-small uk-button-primary"
-               th:href="@{'modify.do'(user_id=${session.loginUser.userId})}">수정하기</a>
+               th:href="@{'/user/modify.do'(user_id=${session.loginUser.userId})}">수정하기</a>
         </p>
         <div class="uk-margin">
             <label class="uk-form-label" for="userUserId">아이디 : </label>

@@ -36,7 +36,7 @@ public class UserController {
             return "redirect:/";
         } else {
             session.removeAttribute("msg");
-            return "redirect:/feed.do";
+            return "redirect:/feed/feed.do";
         }
     }
 

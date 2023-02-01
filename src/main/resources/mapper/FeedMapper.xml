@@ -25,7 +25,7 @@
 
     <select id="findTrend" resultMap="feedMap">
 <!--        SELECT * FROM FEED ORDER BY views DESC LIMIT 10-->
-        SELECT * FROM FEED ORDER BY views DESC LIMIT 10
+        SELECT f.*, i.img_url FROM FEED f, IMAGE i WHERE f.feed_num = i.feed_num ORDER BY views DESC LIMIT 10
     </select>
 
     <!--    int insert(FeedDto dto);    -->

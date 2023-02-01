@@ -40,7 +40,8 @@
 <!--            <li>-->
                 <a href="#" class="uk-text-decoration-none uk-text-default uk-text-muted">
                     <div class="uk-card-media-top uk-cover-container">
-                        <img th:src="@{'/img/{file}'(file=${feed.feedImg})}" alt="" uk-cover>
+                        <img th:src="@{'/img/{file}'(file=${feed.getFeedImg().getImgUrl()})}" uk-cover>
+<!--                        <img th:src="${feed.feedImg.getImgUrl()}" alt="" uk-cover>-->
                         <canvas width="168" height="168"></canvas>
                     </div>
                     <div>

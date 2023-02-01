@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -32,5 +33,14 @@ public class FeedController {
         List<FeedDto> feedList = feedService.trendList();
         model.addAttribute("feedtrendList",feedList);
         return "/index";
+    }
+    @GetMapping("/upload.do")
+    public void upload(){
+
+    }
+
+    @PostMapping("/upload.do")
+    public String upload(Model model){
+        return "/upload";
     }
 }

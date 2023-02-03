@@ -15,4 +15,5 @@ public interface FeedService {
     int register(FeedDto feedDto);
 
     List<FeedDto> trendList();
+    List<FeedDto> findLatest();
 }

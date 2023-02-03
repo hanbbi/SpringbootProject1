@@ -22,7 +22,9 @@ public class BaseController {
     public String list(Model model,
                        HttpServletRequest req){
         List<FeedDto> feedList = feedService.trendList();
+        List<FeedDto> feedLasterList = feedService.findLatest();
         model.addAttribute("feedtrendList",feedList);
+        model.addAttribute("feedLasterList", feedLasterList);
         return "/index";
     }
 }

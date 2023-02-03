@@ -10,6 +10,7 @@ public interface FeedMapper extends CRUD<FeedDto,String> {
 
     List<FeedDto> findAll();
     List<FeedDto> findTrend();
+    List<FeedDto> findLatest();
     FeedDto findById (int feedNum);
 
     int deleteById(String id);

@@ -42,4 +42,7 @@ class FeedServiceImpTest {
     void trendList() {
         feedService.trendList();
     }
+
+    @Test
+    void findLatest() { System.out.println(feedService.findLatest()); }
 }

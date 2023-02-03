@@ -43,4 +43,9 @@ public class FeedServiceImp implements FeedService{
     public List<FeedDto> trendList() {
         return feedMapper.findTrend();
     }
+
+    @Override
+    public List<FeedDto> findLatest() {
+        return feedMapper.findLatest();
+    }
 }

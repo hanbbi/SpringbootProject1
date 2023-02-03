@@ -28,6 +28,10 @@
         SELECT f.*, i.img_url FROM FEED f, IMAGE i WHERE f.feed_num = i.feed_num ORDER BY views DESC LIMIT 10
     </select>
 
+    <select id="findLatest" resultMap="feedMap">
+        SELECT f.*, i.img_url FROM FEED f, IMAGE i WHERE f.feed_num = i.feed_num ORDER BY post_time=#{postTime} DESC LIMIT 5
+    </select>
+
     <!--    int insert(FeedDto dto);    -->
     <insert id="insert" parameterType="FeedDto">
         INSERT INTO FEED (feed_num,title,contents,user_id)

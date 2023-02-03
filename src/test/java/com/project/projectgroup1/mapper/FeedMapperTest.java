@@ -59,4 +59,9 @@ class FeedMapperTest {
     void updateViews() {
 
     }
+
+    @Test
+    void findLatest() {
+        System.out.println(feedMapper.findLatest());
+    }
 }
